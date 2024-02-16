@@ -544,7 +544,7 @@ cdef class GurobiBackend(GenericBackend):
         error = GRBdelconstrs (self.model, 1, ind )
         check(self.env, error)
 
-        error = GRBupdatemodel(self.model)
+        #error = GRBupdatemodel(self.model)
         check(self.env,error)
 
     cpdef add_linear_constraint(self, coefficients, lower_bound, upper_bound, name=None) noexcept:
@@ -617,7 +617,7 @@ cdef class GurobiBackend(GenericBackend):
 
         check(self.env,error)
 
-        error = GRBupdatemodel(self.model)
+        #error = GRBupdatemodel(self.model)
 
         check(self.env,error)
 
